@@ -1,7 +1,6 @@
 ﻿using CefSharp;
 using CefSharp.Wpf;
 using System.Diagnostics;
-using System.Windows;
 
 namespace CefSharpApp
 {
@@ -13,16 +12,15 @@ namespace CefSharpApp
         private static MainWindow _instanceMainForm = null;
 
 
-        public CefObj()
+        public CefObj(ChromiumWebBrowser originalBrowser, MainWindow mainForm)
         {
-          //  _instanceBrowser = originalBrowser;
-           // _instanceMainForm = mainForm;
+            _instanceBrowser = originalBrowser;
+            _instanceMainForm = mainForm;
         }
 
         public void showDevTools()
         {
-            //  _instanceBrowser.ShowDevTools();
-            MessageBox.Show("ddsad");
+            _instanceBrowser.ShowDevTools();
         }
 
         public void opencmd()

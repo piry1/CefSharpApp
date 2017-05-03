@@ -42,7 +42,7 @@ namespace CefSharpApp
             ChromeBrowser.IsBrowserInitializedChanged += new DependencyPropertyChangedEventHandler(LoadStartPage);
 
             // registrate js objects
-            ChromeBrowser.RegisterJsObject("cefCustomObject", new CefObj());
+            ChromeBrowser.RegisterJsObject("cefCustomObject", new CefObj(ChromeBrowser, this));
 
             // Add to window
             con.Content = ChromeBrowser;
