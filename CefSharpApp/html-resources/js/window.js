@@ -6,14 +6,25 @@ $("#btn2").click(function () {
     cefCustomObject.opencmd();
 });
 
-$("#closeWindow").click(function () {
-    cefCustomObject.closeWindow();
+$("#devtools").click(function () {
+    cefCustomObject.showDevTools();
 });
 
-$("#minimizeWindow").click(function () {
+$(".top-bar").bind("mousedown", function () {
+    cefCustomObject.dragWindow();
+    console.log("drag");
+});
+
+$("#closeWindow").bind("click", function () {
+    cefCustomObject.closeWindow();
+    console.log("close");
+});
+
+$("#minimizeWindow").bind("click", function () {
     cefCustomObject.minimizeWindow();
 });
 
-$("#maximizeWindow").click(function () {
+$("#maximizeWindow").bind("click", function () {
     cefCustomObject.maximizeWindow();
 });
+

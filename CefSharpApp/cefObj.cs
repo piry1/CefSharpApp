@@ -66,7 +66,7 @@ namespace CefSharpApp
             ThreadStart min = delegate ()
             {
                 _instanceMainForm.Dispatcher.BeginInvoke((Action)delegate ()
-                {                
+                {
                     if (_instanceMainForm.WindowState != WindowState.Normal)
                         _instanceMainForm.WindowState = WindowState.Normal;
                     else
@@ -76,6 +76,25 @@ namespace CefSharpApp
 
             var t = new Thread(min);
             t.Start();
+        }
+
+        public void dragWindow()
+        {
+            ThreadStart min = delegate ()
+            {
+                _instanceMainForm.Dispatcher.BeginInvoke((Action)delegate ()
+                {
+                    try
+                    {
+                        _instanceMainForm.DragMove();
+                    }
+                    catch { }
+                });
+            };
+
+            var t = new Thread(min);
+            t.Start();
+
         }
     }
 }

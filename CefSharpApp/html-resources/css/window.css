@@ -1,7 +1,23 @@
 ﻿body {
-  margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
-.nav-btns{
-    margin-top: 12px;
+.nav-btns {
+    margin-top: -41px;
+    margin-right: 5px;
+    background-color: #2b3d4e;
+}
+
+.top-bar {
+    height: 46px;
+    background-color: #2b3d4e;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.brand{
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
 }

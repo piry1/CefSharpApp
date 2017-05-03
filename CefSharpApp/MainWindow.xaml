@@ -7,9 +7,12 @@
         xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
         Title="MainWindow" Height="350" Width="800">
     <DockPanel>
         <ContentControl x:Name="con"></ContentControl>
     </DockPanel>
-    
+
 </Window>
