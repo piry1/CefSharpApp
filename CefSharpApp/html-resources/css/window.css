@@ -1,5 +1,20 @@
-﻿body {
+﻿body,html {
     /* margin-top: 60px; */
+    background-color: transparent;
+}
+
+body
+{
+    overflow: hidden;
+}
+
+.main-body{
+    top: 46px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    position: fixed;
 }
 
 #navbar {

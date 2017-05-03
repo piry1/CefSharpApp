@@ -43,7 +43,7 @@ namespace CefSharpApp
 
             // registrate js objects
             ChromeBrowser.RegisterJsObject("cefCustomObject", new CefObj(ChromeBrowser, this));
-
+           
             // Add to window
             con.Content = ChromeBrowser;
 

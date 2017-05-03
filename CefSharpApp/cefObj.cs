@@ -87,6 +87,8 @@ namespace CefSharpApp
                 {
                     try
                     {
+                        if (_instanceMainForm.WindowState == WindowState.Maximized)
+                            _instanceMainForm.WindowState = WindowState.Normal;
                         _instanceMainForm.DragMove();
                     }
                     catch { }
