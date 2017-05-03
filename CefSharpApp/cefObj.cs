@@ -27,12 +27,13 @@ namespace CefSharpApp
             _instanceBrowser.ShowDevTools();
         }
 
-        public string opencmd()
+        public void opencmd()
         {
-            //   ProcessStartInfo start = new ProcessStartInfo("cmd.exe", "/c pause");
-            //  Process.Start(start);
-            return "dane";
+            ProcessStartInfo start = new ProcessStartInfo("cmd.exe", "/c pause");
+            Process.Start(start);
         }
+
+        #region Window management 
 
         public void closeWindow()
         {
@@ -99,5 +100,7 @@ namespace CefSharpApp
             t.Start();
 
         }
+
+        #endregion
     }
 }

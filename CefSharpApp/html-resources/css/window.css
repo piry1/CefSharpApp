@@ -1,14 +1,12 @@
-﻿body,html {
-    /* margin-top: 60px; */
+﻿body, html {
     background-color: transparent;
 }
 
-body
-{
+body {
     overflow: hidden;
 }
 
-.main-body{
+.main-body {
     top: 46px;
     bottom: 0;
     left: 0;
@@ -23,9 +21,9 @@ body
 }
 
 .nav-btns {
-    margin-top: -41px;
-    margin-right: 5px;
-    background-color: #2b3d4e;
+    position: fixed;
+    right: 5px;
+    top: 5px;
 }
 
 .top-bar {
