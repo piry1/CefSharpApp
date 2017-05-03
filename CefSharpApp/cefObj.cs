@@ -27,10 +27,11 @@ namespace CefSharpApp
             _instanceBrowser.ShowDevTools();
         }
 
-        public void opencmd()
+        public string opencmd()
         {
-            ProcessStartInfo start = new ProcessStartInfo("cmd.exe", "/c pause");
-            Process.Start(start);
+            //   ProcessStartInfo start = new ProcessStartInfo("cmd.exe", "/c pause");
+            //  Process.Start(start);
+            return "dane";
         }
 
         public void closeWindow()

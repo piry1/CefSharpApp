@@ -3,7 +3,8 @@
 });
 
 $("#btn2").click(function () {
-    cefCustomObject.opencmd();
+    var data = cefCustomObject.opencmd();
+    console.log(data);
 });
 
 $("#devtools").click(function () {
@@ -12,12 +13,10 @@ $("#devtools").click(function () {
 
 $(".top-bar").bind("mousedown", function () {
     cefCustomObject.dragWindow();
-    console.log("drag");
 });
 
 $("#closeWindow").bind("click", function () {
     cefCustomObject.closeWindow();
-    console.log("close");
 });
 
 $("#minimizeWindow").bind("click", function () {
