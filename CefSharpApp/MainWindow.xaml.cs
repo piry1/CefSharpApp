@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CefSharp;
 using CefSharp.Wpf;
-
+using System.Threading;
 
 namespace CefSharpApp
 {
@@ -35,7 +35,7 @@ namespace CefSharpApp
 
 
         private void InitializeChromium()
-        {
+        {  
             // Create browser
             Cef.Initialize(new CefSettings());
             ChromeBrowser = new ChromiumWebBrowser();
@@ -66,6 +66,8 @@ namespace CefSharpApp
             if (ChromeBrowser.IsInitialized)
                 ChromeBrowser.Load(StartPage);
         }
+
+       
 
     }
 }

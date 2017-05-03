@@ -1,6 +1,10 @@
 ﻿using CefSharp;
 using CefSharp.Wpf;
+using System;
 using System.Diagnostics;
+using System.Threading;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace CefSharpApp
 {
@@ -27,6 +31,51 @@ namespace CefSharpApp
         {
             ProcessStartInfo start = new ProcessStartInfo("cmd.exe", "/c pause");
             Process.Start(start);
+        }
+
+        public void closeWindow()
+        {
+            ThreadStart ts = delegate ()
+            {
+                _instanceMainForm.Dispatcher.BeginInvoke((Action)delegate ()
+                {
+                    Application.Current.Shutdown();
+                });
+            };
+
+            var t = new Thread(ts);
+            t.Start();
+        }
+
+        public void minimizeWindow()
+        {
+            ThreadStart min = delegate ()
+            {
+                _instanceMainForm.Dispatcher.BeginInvoke((Action)delegate ()
+                {
+                    _instanceMainForm.WindowState = WindowState.Minimized;
+                });
+            };
+
+            var t = new Thread(min);
+            t.Start();
+        }
+
+        public void maximizeWindow()
+        {
+            ThreadStart min = delegate ()
+            {
+                _instanceMainForm.Dispatcher.BeginInvoke((Action)delegate ()
+                {                
+                    if (_instanceMainForm.WindowState != WindowState.Normal)
+                        _instanceMainForm.WindowState = WindowState.Normal;
+                    else
+                        _instanceMainForm.WindowState = WindowState.Maximized;
+                });
+            };
+
+            var t = new Thread(min);
+            t.Start();
         }
     }
 }

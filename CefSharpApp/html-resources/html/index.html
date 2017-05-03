@@ -20,10 +20,10 @@
                 <a class="navbar-brand" href="#">CefSharpApp</a>
             </div>
 
-            <div class="btn-group pull-right" style="margin-top: 7px;">
-                <button class="btn btn-success"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                <button class="btn btn-warning"><i class="fa fa-square-o" aria-hidden="true"></i></button>
-                <button class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <div class="btn-group pull-right nav-btns" >
+                <button id="minimizeWindow" class="btn btn-success btn-sm"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <button id="maximizeWindow" class="btn btn-warning btn-sm"><i class="fa fa-square-o" aria-hidden="true"></i></button>
+                <button id="closeWindow" class="btn btn-danger btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
 
         </div>
@@ -45,15 +45,7 @@
     <!-- Boottrap JS -->
     <script src="../js/bootstrap.min.js"></script>
 
-    <script>
-        $("#btn1").click(function () {
-            cefCustomObject.showDevTools();
-        });
-
-        $("#btn2").click(function () {
-            cefCustomObject.opencmd();
-        });
-    </script>
+    <script src="../js/window.js"></script>
 
 </body>
 
